@@ -3,6 +3,10 @@ document.addEventListener("DOMContentLoaded", function () {
     fetchData();
 });
 let objectBank;
+function deleteValue(x){
+    document.getElementById("CustomerId").value=``;
+    DisplayCharts(x);
+}
 function DisplayCharts(x) {
     document.getElementById("charts").scrollIntoView({ behavior: 'smooth' });
     let malhoza = Array.from(document.getElementsByClassName("malhoza"));
@@ -176,7 +180,7 @@ function fetchData() {
                         cartona2 = `
                     <td class="text-center p-2 myBorder rounded-4 p-1">${arr1[j]}$</td>
                     <td class="text-center p-2 myBorder rounded-4 p-1">${arr2[j]}</td>
-                    <td class="text-center p-2 myBorder rounded-4 p-1"><button type="button" class="btn btn-outline-primary h-9px pt-0 w-50px" onclick="DisplayCharts(${objectBank.customers[i].id})">View Data</button></td>
+                    <td class="text-center p-2 myBorder rounded-4 p-1"><button type="button" class="btn btn-outline-primary h-9px pt-0 w-50px" onclick="deleteValue(${objectBank.customers[i].id})">View Data</button></td>
                 </tr>
             `
                     } else {
@@ -184,7 +188,7 @@ function fetchData() {
                 <tr>
                     <td class="text-center p-2 myBorder rounded-4 p-1">${arr1[j]}$</td>
                     <td class="text-center p-2 myBorder rounded-4 p-1">${arr2[j]}</td>
-                    <td class="text-center p-2 myBorder rounded-4 p-1"><button type="button" class="btn btn-outline-primary h-9px pt-0 w-50px" onclick="DisplayCharts(${objectBank.customers[i].id})">View Data</button></td>
+                    <td class="text-center p-2 myBorder rounded-4 p-1"><button type="button" class="btn btn-outline-primary h-9px pt-0 w-50px" onclick="deleteValue(${objectBank.customers[i].id})">View Data</button></td>
                 </tr>
                 `
                     }
@@ -239,7 +243,7 @@ function fetchData() {
                             <td class="text-center p-2 myBorder p-1" rowspan="${counter}">${objectBank.customers[j].name}</td>
                         `;
                                 cartona2 += `
-                            <td class="text-center p-2 myBorder rounded-4 p-1"><button type="button" class="btn btn-outline-primary h-9px pt-0 w-50px" onclick="DisplayCharts(${objectBank.customers[j].id})">View Data</button></td>
+                            <td class="text-center p-2 myBorder rounded-4 p-1"><button type="button" class="btn btn-outline-primary h-9px pt-0 w-50px" onclick="deleteValue(${objectBank.customers[j].id})">View Data</button></td>
                         </tr>
                         `
                             }
