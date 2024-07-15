@@ -1,0 +1,70 @@
+body {
+    background-color: teal;
+}
+
+.border-collapse {
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+.font-Montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.text-custom1 {
+    color: rgb(178, 178, 178);
+}
+
+.myBorder {
+    border: 1px solid #000000;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #a4a3a3;
+}
+
+td[rowspan] {
+    background-color: #282727;
+    color: rgb(224, 224, 224);
+}
+
+@media (max-width: 1120px) {
+    .w-lg-85 {
+        width: 85% !important;
+    }
+}
+@media(max-width:670px){
+    .w-sm-95{
+        width: 95% !important;
+    }
+    .mt-sm-5 {
+        margin-top: 70px !important;
+    }
+}
+.w-85 {
+    width: 85% !important;
+}
+
+.w-50px {
+    width: 150px !important;
+}
+
+.h-9px {
+    height: 26px !important;
+}
+
+.my-text-info {
+    color: #11badb;
+}
+
+.my-text-danger {
+    color: #8d1723;
+}
